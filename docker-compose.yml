@@ -1,0 +1,53 @@
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: ecommerce_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ecommerce_db
+      POSTGRES_USER: ecommerce_user
+      POSTGRES_PASSWORD: ecommerce123
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - ecommerce_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ecommerce_user -d ecommerce_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: ecommerce_pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@ecommerce.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "127.0.0.1:5050:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+  ingestion:
+    build:
+      context: .
+      dockerfile: Dockerfile.ingestion
+    container_name: ecommerce_ingestion
+    restart: "no"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ecommerce_db
+      DB_USER: ecommerce_user
+      DB_PASSWORD: ecommerce123
+    volumes:
+      - ./data/raw:/app/data/raw:ro
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy      
+
+volumes:
+  ecommerce_postgres_data:

@@ -1,0 +1,74 @@
+dataset,check,column,issue_count,examples
+customers,Missing values,customer_id,0,
+customers,Missing values,customer_unique_id,0,
+customers,Missing values,customer_zip_code_prefix,0,
+customers,Missing values,customer_city,0,
+customers,Missing values,customer_state,0,
+customers,Duplicate rows,ALL_COLUMNS,0,
+orders,Missing values,order_id,0,
+orders,Missing values,customer_id,0,
+orders,Missing values,order_status,0,
+orders,Missing values,order_purchase_timestamp,0,
+orders,Missing values,order_approved_at,160,
+orders,Missing values,order_delivered_carrier_date,1783,
+orders,Missing values,order_delivered_customer_date,2965,
+orders,Missing values,order_estimated_delivery_date,0,
+orders,Duplicate rows,ALL_COLUMNS,0,
+order_items,Missing values,order_id,0,
+order_items,Missing values,order_item_id,0,
+order_items,Missing values,product_id,0,
+order_items,Missing values,seller_id,0,
+order_items,Missing values,shipping_limit_date,0,
+order_items,Missing values,price,0,
+order_items,Missing values,freight_value,0,
+order_items,Duplicate rows,ALL_COLUMNS,0,
+products,Missing values,product_id,0,
+products,Missing values,product_category_name,610,
+products,Missing values,product_name_lenght,610,
+products,Missing values,product_description_lenght,610,
+products,Missing values,product_photos_qty,610,
+products,Missing values,product_weight_g,2,
+products,Missing values,product_length_cm,2,
+products,Missing values,product_height_cm,2,
+products,Missing values,product_width_cm,2,
+products,Duplicate rows,ALL_COLUMNS,0,
+category_translation,Missing values,product_category_name,0,
+category_translation,Missing values,product_category_name_english,0,
+category_translation,Duplicate rows,ALL_COLUMNS,0,
+customers,Missing primary key,customer_id,0,
+customers,Duplicate primary key,customer_id,0,[]
+orders,Missing primary key,order_id,0,
+orders,Duplicate primary key,order_id,0,[]
+order_items,Missing primary key,"order_id, order_item_id",0,
+order_items,Duplicate primary key,"order_id, order_item_id",0,[]
+products,Missing primary key,product_id,0,
+products,Duplicate primary key,product_id,0,[]
+category_translation,Missing primary key,product_category_name,0,
+category_translation,Duplicate primary key,product_category_name,0,[]
+order_items,Invalid numeric values,price,0,[]
+order_items,Values below 0,price,0,[]
+order_items,Invalid numeric values,freight_value,0,[]
+order_items,Values below 0,freight_value,0,[]
+products,Invalid numeric values,product_name_lenght,0,[]
+products,Values below 0,product_name_lenght,0,[]
+products,Invalid numeric values,product_description_lenght,0,[]
+products,Values below 0,product_description_lenght,0,[]
+products,Invalid numeric values,product_photos_qty,0,[]
+products,Values below 0,product_photos_qty,0,[]
+products,Invalid numeric values,product_weight_g,0,[]
+products,Values below 1,product_weight_g,4,"['0', '0', '0', '0']"
+products,Invalid numeric values,product_length_cm,0,[]
+products,Values below 1,product_length_cm,0,[]
+products,Invalid numeric values,product_height_cm,0,[]
+products,Values below 1,product_height_cm,0,[]
+products,Invalid numeric values,product_width_cm,0,[]
+products,Values below 1,product_width_cm,0,[]
+orders,Invalid date values,order_purchase_timestamp,0,[]
+orders,Invalid date values,order_approved_at,0,[]
+orders,Invalid date values,order_delivered_carrier_date,0,[]
+orders,Invalid date values,order_delivered_customer_date,0,[]
+orders,Invalid date values,order_estimated_delivery_date,0,[]
+orders,Unknown order status,order_status,0,[]
+orders,Customer ID not found,customer_id,0,[]
+order_items,Order ID not found,order_id,0,[]
+order_items,Product ID not found,product_id,0,[]

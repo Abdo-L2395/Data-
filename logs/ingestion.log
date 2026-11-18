@@ -1,0 +1,20 @@
+2026-11-18 17:05:38,542 | INFO | STARTED | olist_customers_dataset.csv | Batch: a1e3f945-ddbf-4978-a51c-a78edbfa03de
+2026-11-18 17:05:41,304 | INFO | SUCCESS | olist_customers_dataset.csv | Read: 99441 | Loaded: 99441
+2026-11-18 17:07:57,349 | INFO | INGESTION PIPELINE STARTED
+2026-11-18 17:07:57,491 | INFO | SKIPPED | olist_customers_dataset.csv | This exact file version was already loaded.
+2026-11-18 17:07:57,668 | INFO | STARTED | olist_orders_dataset.csv | Batch: a9844fd3-eece-4d4b-883d-724e58577396
+2026-11-18 17:08:01,633 | INFO | SUCCESS | olist_orders_dataset.csv | Read: 99441 | Loaded: 99441
+2026-11-18 17:08:01,789 | INFO | STARTED | olist_order_items_dataset.csv | Batch: fe243d9c-347d-4e10-8c39-0dca3f1f4f42
+2026-11-18 17:08:06,200 | INFO | SUCCESS | olist_order_items_dataset.csv | Read: 112650 | Loaded: 112650
+2026-11-18 17:08:06,236 | INFO | STARTED | olist_products_dataset.csv | Batch: 8e129a73-c4e1-407e-9f32-491bfefe98f6
+2026-11-18 17:08:07,485 | INFO | SUCCESS | olist_products_dataset.csv | Read: 32951 | Loaded: 32951
+2026-11-18 17:08:07,497 | INFO | STARTED | product_category_name_translation.csv | Batch: ff8e68d5-8897-4f7e-9a30-3103b1fa534c
+2026-11-18 17:08:07,510 | INFO | SUCCESS | product_category_name_translation.csv | Read: 71 | Loaded: 71
+2026-11-18 17:08:07,511 | INFO | INGESTION PIPELINE COMPLETED
+2026-11-18 16:13:14,933 | INFO | INGESTION PIPELINE STARTED
+2026-11-18 16:13:15,040 | INFO | SKIPPED | olist_customers_dataset.csv | This exact file version was already loaded.
+2026-11-18 16:13:15,195 | INFO | SKIPPED | olist_orders_dataset.csv | This exact file version was already loaded.
+2026-11-18 16:13:15,345 | INFO | SKIPPED | olist_order_items_dataset.csv | This exact file version was already loaded.
+2026-11-18 16:13:15,369 | INFO | SKIPPED | olist_products_dataset.csv | This exact file version was already loaded.
+2026-11-18 16:13:15,375 | INFO | SKIPPED | product_category_name_translation.csv | This exact file version was already loaded.
+2026-11-18 16:13:15,376 | INFO | INGESTION PIPELINE COMPLETED

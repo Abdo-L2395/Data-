@@ -1,0 +1,47 @@
+RAW DATA PROFILING REPORT
+============================================================
+
+DATASET: customers
+----------------------------------------
+Rows: 99441
+Columns: 5
+
+
+DATASET: orders
+----------------------------------------
+Rows: 99441
+Columns: 8
+
+Missing values | order_approved_at | Count: 160
+Missing values | order_delivered_carrier_date | Count: 1783
+Missing values | order_delivered_customer_date | Count: 2965
+
+DATASET: order_items
+----------------------------------------
+Rows: 112650
+Columns: 7
+
+
+DATASET: products
+----------------------------------------
+Rows: 32951
+Columns: 9
+
+Missing values | product_category_name | Count: 610
+Missing values | product_name_lenght | Count: 610
+Missing values | product_description_lenght | Count: 610
+Missing values | product_photos_qty | Count: 610
+Missing values | product_weight_g | Count: 2
+Missing values | product_length_cm | Count: 2
+Missing values | product_height_cm | Count: 2
+Missing values | product_width_cm | Count: 2
+Values below 1 | product_weight_g | Count: 4
+
+DATASET: category_translation
+----------------------------------------
+Rows: 71
+Columns: 2
+
+
+============================================================
+PROFILING COMPLETED
